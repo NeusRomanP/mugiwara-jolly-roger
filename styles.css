@@ -1,0 +1,297 @@
+body{
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main{
+  width: 300px;
+  max-width: 90%;
+  max-height: 90vh;
+  aspect-ratio: 1;
+  position: relative;
+  display: flex;
+}
+
+
+/*BONES*/
+.bones, .bone1, .bone2{
+  width: 90%;
+  height: 90%;
+}
+
+.bones{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.bone1{
+  display: flex;
+  align-items: center;
+  rotate: -45deg;
+  position: absolute;
+}
+
+.bone1 .top{
+  width: 50%;
+  height: 7%;
+  background-color: #FFF;
+}
+
+.bone1 .top::after{
+  content: '';
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% -45%;
+  background-color: #FFF;
+}
+
+.bone1 .top::before{
+  content: '';
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% 45%;
+  background-color: #FFF;
+}
+
+.bone1 .bottom{
+  width: 50%;
+  height: 7%;
+  background-color: #FFF;
+  rotate: 180deg;
+}
+
+.bone1 .bottom::after{
+  content: '';
+  position: absolute;
+  width: 14%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% -45%;
+  background-color: #FFF;
+}
+
+.bone1 .bottom::before{
+  content: '';
+  position: absolute;
+  width: 14%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% 45%;
+  background-color: #FFF;
+}
+
+.bone2{
+  display: flex;
+  align-items: center;
+  rotate: 45deg;
+  position: absolute;
+}
+
+.bone2 .top{
+  width: 50%;
+  height: 7%;
+  background-color: #FFF;
+}
+
+.bone2 .top::after{
+  content: '';
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% -45%;
+  background-color: #FFF;
+}
+
+.bone2 .top::before{
+  content: '';
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% 45%;
+  background-color: #FFF;
+}
+
+.bone2 .bottom{
+  width: 50%;
+  height: 7%;
+  background-color: #FFF;
+  rotate: 180deg;
+}
+
+.bone2 .bottom::after{
+  content: '';
+  position: absolute;
+  width: 14%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% -45%;
+  background-color: #FFF;
+}
+
+.bone2 .bottom::before{
+  content: '';
+  position: absolute;
+  width: 14%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% 45%;
+  background-color: #FFF;
+}
+
+/* SKULL */
+
+.skull{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.head{
+  background-color: #FFF;
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  translate: 0 50%;
+  border: 3px solid black;
+}
+
+.chin{
+  width: 25%;
+  height: 30%;
+  translate: 0 150%;
+  background-color: #FFF;
+  border: 3px solid black;
+  border-radius: 55% 55% 50% 50% / 55% 55% 45% 45%;
+  position: relative;
+  overflow: hidden;
+}
+
+.teeth-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: 9/7;
+  translate: 0 20%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.teeth-container .top{
+  display: grid;
+  height: 65%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.teeth-container .bottom{
+  display: grid;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.teeth{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.tooth{
+  width: 25%;
+  height: 100%;
+}
+
+.tooth:not(:nth-child(1)){
+  border-left: 2px solid #000;
+}
+
+/* HEAD */
+.eyes{
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  bottom: 15%;
+}
+
+.eyes .left{
+  background-color: #000;
+  border-radius: 50%;
+  width: 25%;
+  aspect-ratio: 1;
+}
+
+.eyes .right{
+  background-color: #000;
+  border-radius: 50%;
+  width: 25%;
+  aspect-ratio: 1;
+}
+
+.head{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.nose{
+  background-color: #000;
+  border-radius: 50%;
+  width: 7%;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 5%;
+}
+
+/* HAT */
+.hat-top{
+  width: 150%;
+  height: 50%;
+  position: absolute;
+  background-color: #c69502;
+}
+
+.hat-top .band{
+  width: 100%;
+  height: 25%;
+  background-color: #F00;
+  position: absolute;
+  top: 100%;
+  translate: 0 -100%;
+  border: 3px solid #000;
+}
+
+.hat-bottom{
+  background-color: #c69502;
+  width: 60%;
+  height: 3%;
+  border-radius: 10px;
+  position: absolute;
+  top: 40%;
+  border: 3px solid #000;
+}
